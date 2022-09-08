@@ -14,16 +14,14 @@ class MyTileService: TileService() {
     override fun onClick() {
         super.onClick()
 
-        // Called when the user click the tile
         try{
-            val newIntent=FlutterActivity.withNewEngine().dartEntrypointArgs(listOf("launchFromQuickTile")).build(this)
-             newIntent.flags=Intent.FLAG_ACTIVITY_NEW_TASK
-            startActivityAndCollapse(newIntent)
-        }
-        catch (e:Exception){
-            Log.d("debug","Exception ${e.toString()}")
-        }
-
+              val newIntent=FlutterActivity.withNewEngine().dartEntrypointArgs(listOf("launchFromQuickTile")).build(this)
+               newIntent.flags=Intent.FLAG_ACTIVITY_NEW_TASK
+              startActivityAndCollapse(newIntent)
+          }
+          catch (e:Exception){
+              Log.d("debug","Exception ${e.toString()}")
+          }
     }
 
     override fun onTileRemoved() {

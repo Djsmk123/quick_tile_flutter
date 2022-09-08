@@ -42,7 +42,7 @@
        <service
            android:name=".MyTileService"
            android:icon="@drawable/flutter"
-           android:label="@string/tile_label"
+           android:label="Flutter App Tile"
            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
            android:exported="true">
 
